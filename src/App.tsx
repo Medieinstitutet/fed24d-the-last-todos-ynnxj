@@ -1,7 +1,14 @@
-import "./App.css";
+import "./App.css"
+import { Lists } from "./components/Lists"
 
-function App() {
-  return <></>;
+const App = () => {
+  return (
+    <>
+      <section>
+        <Lists/>
+      </section>
+    </>
+  )
 }
 
-export default App;
+export default App
