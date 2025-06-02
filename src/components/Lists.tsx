@@ -16,15 +16,15 @@ export const Lists = () => {
 
   return (
     <>
-    <div className="shopping-list">
+    <ul className="shopping-list">
       {items.map((item) =>
-        <div key={item.name} className="item">
+        <li key={item.name} className="item">
         <h3>Item: {item.name}</h3>
         <p>Amount: {item.amount}</p>
         <span>Got it: </span><input type="checkbox" checked={item.isDone} />
-        </div>
+        </li>
       )}
-    </div>
+    </ul>
     </>
   )
 }
