@@ -1,11 +1,11 @@
 import "./App.css"
-import { Lists } from "./components/Lists"
+import { ShoppingList } from "./components/Lists"
 
 const App = () => {
   return (
     <>
       <section>
-        <Lists/>
+        <ShoppingList/>
       </section>
     </>
   )
