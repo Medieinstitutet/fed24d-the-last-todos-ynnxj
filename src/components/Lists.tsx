@@ -41,21 +41,22 @@ export const ShoppingList = () => {
   }
 
   return (
-    <ul className="shopping-list">
-      {items.map((item) => (
-        <li key={item.name} className="item">
-          <h3>Item: {item.name}</h3>
-          <p>Amount: {item.amount}</p>
-          <span>Got it: </span>
-          <input
-            type="checkbox"
-            checked={item.isDone}
-            onChange={() => toggleDone(item.name)}
-          />
-          <button onClick={() => removeItem(item.name)}>Remove</button>
-        </li>
-      ))}
-    </ul>
+    <>
+      <div className="shopping-list">
+        <ul>
+          {items.map((item) => (
+            <li key={item.name} className="item">
+              <h3>{item.name}</h3>
+              <p>Amount: {item.amount}</p>
+              <label>In cart:
+                <input className="checkbox" type="checkbox" checked={item.isDone} onChange={() => toggleDone(item.name)}/>
+              </label>
+              <button onClick={() => removeItem(item.name)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   )
 }
 
