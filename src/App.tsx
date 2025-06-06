@@ -1,4 +1,4 @@
-import "./App.css"
+import "./App.scss"
 import { ShoppingList } from "./components/Lists"
 import { Title } from "./components/WindowTitle"
 

@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url('/src/assets/fonts/ms-sans-serif-1.otf');
+}
+
+:root {
+  font-family: "Pixelated MS Sans Serif";
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+body {
+  background-image: url('/src/assets/backgrounds/windows_xp_bliss-wide.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  h1 {
+    font-size: 1.3em;
+    font-weight: 100;
+    text-shadow: 2px 2px #000000;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 0.5;
+  }
+
+  button {
+    border-radius: 4px;
+    color: black;
+    border: 1px solid black;
+    padding: 0.3em 1.3em;
+    margin-top: 1rem;
+    font-family: inherit;
+    font-size: 0.9em;
+    background-color:rgba(241, 235, 228, 0.87);
+    cursor: pointer;
+    box-shadow: inset -1px 1px #cec9c0, inset 1px 2px #c9bea7, inset -2px 2px #a89f8d, inset 2px -2px #a89f8d;
+
+    &:hover {
+      box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #fdd889, inset -2px 2px #fbc761, inset 2px -2px #e5a01a;
+    }
+    
+    &:focus,
+    &:focus-visible {
+      box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4;
+    }
+  }
+  
+  .checkbox {
+    cursor: pointer;
+  }
+}
+
+.window-header {
+  background: #69b9ff;
+  background: linear-gradient(180deg,rgba(105, 185, 255, 1) 0%, rgba(65, 132, 232, 1) 23%, rgba(30, 110, 230, 1) 47%, rgba(29, 98, 209, 1) 71%, rgba(0, 54, 247, 1) 100%);
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(52, 52, 83);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 5px 10px;
+  box-shadow: 0px 1px 1px rgb(13, 17, 63);
+
+  .window-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    button {
+      color: rgb(255, 255, 255);
+      box-shadow: inset -1px 1px #cec9c0, inset 1px 1px #c9bea7, inset -2px 2px #f8ebe5, inset 2px -2px #a89f8d;
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 0.1em;
+      margin: 0px;
+    }
+
+    .minimize-btn, 
+    .full-window-btn {
+      background-color: #1662dd;
+      box-shadow: inset -1px 1px #3a4ad8, inset 2px 1px #787aff, inset -3px 3px #727bfc, inset 4px -4px #4d53ac;
+
+      &:hover {
+        background-color: #578bdf;
+        box-shadow: inset -1px 1px #626fe0, inset 2px 1px #9ca6fd, inset -3px 3px #979dfa, inset 4px -4px #6c70ad;
+      }
+    }
+
+    .close-btn {
+      background-color: rgb(212, 35, 35);
+      box-shadow: inset -1px 1px #c92121, inset 2px 1px #f85050, inset -3px 3px #f74343, inset 4px -4px #ad3232;
+
+      &:hover {
+        background-color: rgb(226, 72, 72);
+        box-shadow: inset -1px 1px #d83a3a, inset 2px 1px #ff7878, inset -3px 3px #fc7272, inset 4px -4px #ac4d4d;
+      }
+    }
+  }
+}
+
+
+.shopping-list {
+  background-color: rgb(231, 228, 222);
+  border: 3px solid rgb(0, 0, 187);
+  border-top: none;
+  border-left: 2px solid #3f7bdd;
+  box-shadow: inset -2px 1px #003ba8, inset 3px -3px #1662dd, inset 3px -3px #0353bd;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 0;
+
+    li {
+      flex-grow: 1;
+      margin: 2rem;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+
