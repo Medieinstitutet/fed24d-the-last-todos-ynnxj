@@ -1,5 +1,7 @@
 import { useState } from "react"
 import type { Item } from "../models/Item"
+import { Title } from "../components/WindowTitle"
+import { AddItem } from "./AddItem"
 
 /**
  * Renders and handle a shopping list.
@@ -33,6 +35,13 @@ export const ShoppingList = () => {
     localStorage.setItem("items", JSON.stringify(updatedList))
   }
 
+  const addItem = (item: Item) => {
+    const updated = [...items, item]
+
+    setItems(updated)
+    localStorage.setItem("items", JSON.stringify(updated))
+  }
+
   const removeItem = (name: string) => {
     const updatedList = items.filter(item => item.name !== name)
 
@@ -40,8 +49,11 @@ export const ShoppingList = () => {
     localStorage.setItem("items", JSON.stringify(updatedList))
   }
 
+  console.log("Updated Shopping List:", items)
+
   return (
     <>
+      <Title mode="list"/>
       <div className="shopping-list">
         <ul>
           {items.map((item) => (
@@ -56,6 +68,8 @@ export const ShoppingList = () => {
           ))}
         </ul>
       </div>
+
+      <AddItem addItem={addItem} />
     </>
   )
 }
