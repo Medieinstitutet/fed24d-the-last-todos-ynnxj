@@ -20,15 +20,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
-  h1 {
-    font-size: 1.3em;
+  h1,
+  h2 {
+    font-size: 1.2em;
     font-weight: 100;
     text-shadow: 2px 2px #000000;
     margin: 0;
   }
 
   h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 700;
     line-height: 0.5;
   }
@@ -54,13 +55,13 @@ body {
       box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4;
     }
   }
-  
+
   .checkbox {
     cursor: pointer;
   }
 }
 
-.window-header {
+.window-header, .notepad-header {
   background: #69b9ff;
   background: linear-gradient(180deg,rgba(105, 185, 255, 1) 0%, rgba(65, 132, 232, 1) 23%, rgba(30, 110, 230, 1) 47%, rgba(29, 98, 209, 1) 71%, rgba(0, 54, 247, 1) 100%);
   color: white;
@@ -109,15 +110,22 @@ body {
       }
     }
   }
+
+  .notepad-icon {
+    width: 1.5rem;
+    margin-right: 5px;
+    float: left;
+  }
 }
 
-
-.shopping-list {
+.shopping-list, .add-item-form {
   background-color: rgb(231, 228, 222);
   border: 3px solid rgb(0, 0, 187);
   border-top: none;
   border-left: 2px solid #3f7bdd;
   box-shadow: inset -2px 1px #003ba8, inset 3px -3px #1662dd, inset 3px -3px #0353bd;
+  margin-bottom: 30px;
+  max-width: 500px;
 
   ul {
     display: flex;
@@ -132,6 +140,36 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+}
+
+.add-item-form {
+  padding: 30px 35px; 
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    label {
+      margin: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: black dotted 1px;
+
+      input {
+        font-size: 1rem;
+        padding: 3px 6px;
+        font-family: inherit;
+        margin-bottom: 5px;
+      }
+    }
+
+    button {
+      align-self: end;
     }
   }
 }
