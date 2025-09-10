@@ -1,9 +1,10 @@
 # 📌 Rättningsrapport – fed24d-the-last-todos-ynnxj
 
 ## 🎯 Uppgiftens Krav:
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Tfc19Mhg)
 # Inlämningsuppgift Todo
 
-I denna inlämningsuppgift kommer ni att skapa er egen todo-lista i en react-applikation.
+I denna inlämningsuppgift kommer ni att skapa er egen todo-lista.
 Sidan skall visa ett antal punkter som skall göras. Dessa skall då komma upp på skärmen i form av en lista. När uppgiften är slutförd skall användaren kunna markera uppgiften som slutförd och uppgiften skall då tas bort från listan.
 
 ## Betyg G
@@ -11,17 +12,20 @@ Sidan skall visa ett antal punkter som skall göras. Dessa skall då komma upp p
 - Skapa en hårdkodad lista med punkter att göra (hitta på egna punkter, dessa skall inte bara vara en text)
 - Presentera listan på skärmen, helst med lite kontroll. Detta betyder i en html-struktur t.ex. i en ul/li-lista
 - Implementera klickhändelse för att hantera borttagandet av en todo.
-- Todo markeras som klar/tas bort från skärmen och markeras som klar i javascript-listan.
+- Todo markeras som klar på skärmen och markeras som klar i javascript-listan.
+- Ni behöver använda localStorage så att listan inte börjar om från början varje gång sidan används.
+- Ni behöver använda er av en komponent.
+- Ni behöver använda er av state med en lista med objekt.
 
 ## Betyg VG
 
 - Alla punkter under G
 - Kunna visa även klara händelser och klicka tillbaka den så att de blir oklara igen.
 - Skapa ett formulär som tillåter att en användare skapar nya todos efterhand.
-- Använda lifting state up för att dela upp dina komponenter bättre.
 - Kunna sortera ordningen på dina todos.
-- Implementera ett valfritt grafiskt ramverk till din todolista, t.ex. material ui eller tailwind.
-- Egen css får gärna skrivas och då skall ni ha en bra struktur och använda flex eller grid på ett bra sätt.
+- Implementera ett valfritt grafiskt ramverk, t.ex. tailwind eller material ui.
+- Ni behöver ha minst tre komponenter.
+- Ni måste använda Lifting State Up.
 
 ## Allmänt
 
@@ -50,7 +54,7 @@ för att köra projektet.
 
 
 ## 🏆 **Betyg: VG**
-📌 **Motivering:** Koden uppfyller alla krav för både G och VG-nivån. Applikationen har en fungerande lista med 'todos' (shopping items), kan lägga till och ta bort 'todos', samt markera uppgifter som klara eller oklara. Det finns också ett formulär för att lägga till nya 'todos'. Komponenterna är bra strukturerade med 'lifting state up' angreppssättet och ett grafiskt ramverk har implementerats, vilket verkar vara en custom 'Windows XP' stil här. Styling med hjälp av flexbox är också närvarande.
+📌 **Motivering:** Koden uppfyller alla G-krav och även VG-kraven. Den är välstrukturerad med flera komponenter, korrekt state-hantering och använder localStorage effektivt för att behålla listan mellan sidladdningar. Det finns också ett användarvänligt formulär för att lägga till nya objekt och funktionalitet för att markera objekt som klara eller oklara. Projektet använder Material Icons och har ett unikt grafiskt tema som gör det engagerande.
 
 💡 **Förbättringsförslag:**  
-1. Lägg till felhantering och inputvalidering för användarinmatade data i formuläret. 2. Förbättra prestandan vid rendering av långa listor, förslagsvis genom att införliva 'React.memo' för icke-statiska komponenter. 3. Använd "keyExtractor" i React för att förbättra listans renderingsprestanda. 4. Lägg till feedback till användaren vid olika åtgärder såsom att markera en uppgift som klar eller när en uppgift läggs till/tas bort.
+Koden kan förbättras med bättre felhantering, särskilt vid misslyckad JSON-parse för localStorage. Det vore också bra att lägga till validering för att förhindra att dubbletter kan läggas till. Dessutom kan koden kommenteras mer utförligt för framtida underhåll och för att göra det lättare för andra utvecklare att förstå.
